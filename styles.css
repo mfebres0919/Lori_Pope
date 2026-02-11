@@ -673,6 +673,12 @@ font-family: "DM Sans", sans-serif;
     border-radius: 1.5rem;
 }
 
+@media (min-width: 700px) {
+  .cta-img {
+    padding-bottom: 10rem;
+  }
+}
+
 
 @media (min-width: 850px){
     .cta-eq-2{
