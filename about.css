@@ -364,39 +364,9 @@ a{ color:inherit; text-decoration:none; }
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 200%;
+    width: 100%;
 }
 
-.about-eq2 {
-    position: absolute;
-    left: -10%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 200%;
-}
-
-.about-eq3 {
-    position: absolute;
-    right: 10%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 200%;
-}
-.about-eq3 {
-    position: absolute;
-    right: 10%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 200%;
-}
-
-.about-eq4 {
-    position: absolute;
-    right: -210%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 200%;
-}
 
 
 
