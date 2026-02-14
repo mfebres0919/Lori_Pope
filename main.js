@@ -67,32 +67,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
 
-// MODAL CODE 
-const modal = document.getElementById("videoModal");
-const iframe = document.getElementById("videoIframe");
-const closeBtn = document.querySelector(".video-close");
+    const modal = document.getElementById("audioModal");
+    const audioPlayer = document.getElementById("audioPlayer");
+    const openButtons = document.querySelectorAll(".open-audio");
+    const closeModalBtn = document.querySelector(".close-modal");
 
-// OPEN MODAL
-document.querySelectorAll(".play-btn").forEach(btn => {
-    btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        const videoURL = this.dataset.video + "?autoplay=1";
+    console.log("Modal JS loaded"); // Debug line
 
-        iframe.src = videoURL;
-        modal.style.display = "flex";
+    // 🔹 OPEN MODAL
+    openButtons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            const audioFile = button.dataset.audio; 
+            console.log("Opening:", audioFile);
+
+            audioPlayer.src = audioFile;
+            modal.style.display = "flex";
+
+            audioPlayer.play().catch(err => {
+                console.warn("Autoplay blocked:", err);
+            });
+        });
     });
-});
 
-// CLOSE MODAL
-function closeModal() {
-    modal.style.display = "none";
-    iframe.src = ""; // stop video
-}
+    // 🔹 CLOSE MODAL (X button)
+    closeModalBtn.addEventListener("click", () => {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+        modal.style.display = "none";
+    });
 
-closeBtn.addEventListener("click", closeModal);
+    // 🔹 CLOSE MODAL WHEN CLICKING OUTSIDE THE BOX
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            modal.style.display = "none";
+        }
+    });
 
-// Click outside video closes modal
-modal.addEventListener("click", function(e) {
-    if (e.target === modal) closeModal();
 });

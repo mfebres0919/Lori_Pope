@@ -384,8 +384,9 @@ a{ color:inherit; text-decoration:none; }
     left: 0;
     bottom: -0.3em;
     width: 100%;
-
 }
+
+
 
 
 .span-green {
@@ -597,6 +598,170 @@ font-family: "DM Sans", sans-serif;
     .showcase-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+
+
+
+/* -------------------------
+   SECTION BASE LAYOUT
+------------------------- */
+.audio-reels {
+    padding: 2rem 1.5rem;
+    background-color: #F1F4F2;
+}
+
+.audio-header {
+    text-align: center;
+    font-size: 2rem;
+    color: #2F3C35;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.audio-squiggle {
+    position: absolute;
+    left: 0;
+    bottom: -0.3em;
+    width: 100%;
+}
+
+
+
+
+/* -------------------------
+   TOGGLE BUTTONS
+------------------------- */
+.audio-toggle {
+    background: #e7e8ea;
+    width: fit-content;
+    margin: 0 auto 2rem;
+    padding: 0.3rem;
+    border-radius: 50px;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.toggle-btn {
+    padding: 0.6rem 1rem;
+    border: none;
+    background: transparent;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #2f2f2f;
+}
+
+.toggle-btn.active {
+    background: #6f8f7d;
+    color: white;
+}
+
+/* -------------------------
+   AUDIO CARDS BASE
+------------------------- */
+.audio-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.audio-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: white;
+}
+
+/* Narration card highlighted */
+.narration-card.active {
+    background: #aabfb3;
+}
+
+/* -------------------------
+   CARD HEADER
+------------------------- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.card-header .left {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    color: #2f463d;
+}
+
+.card-header .narriation-h3 {
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+.mic-icon {
+    width: 20px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #4a4c56;
+    font-size: 0.9rem;
+}
+
+.time img {
+    width: 18px;
+}
+
+/* -------------------------
+   AUDIO CONTROLS — FIXES EVERYTHING
+------------------------- */
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.audio-play-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+.waveform {
+    flex: 1;          /* Fills all remaining space */
+    max-width: 100%;
+    height: auto;
+}
+
+.audio-download-btn img {
+    width: 26px;
+}
+
+.audio-play-btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+}
+
+.audio-play-btn img {
+    display: block;   /* removes inline spacing */
+}
+
+
+@media (min-width: 950px) {
+  .audio-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 
@@ -1068,42 +1233,58 @@ font-family: "DM Sans", sans-serif;
 
 
 
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
 
-/* VIDEO MODAL SECTION */
-/* MODAL BACKDROP */
-.video-modal {
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+/* 🔹 BACKDROP */
+.audio-modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.8);
-    display: none;
+    background: rgba(0,0,0,0.6);
+    display: none; 
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
 
-/* INNER WRAPPER */
-.video-modal-content {
-    position: relative;
+/* 🔹 MODAL BOX */
+.audio-modal-content {
+    background: #aabfb3;
+    padding: 2rem;
+    border-radius: 12px;
     width: 90%;
-    max-width: 800px;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
 }
 
-/* CLOSE BUTTON */
-.video-close {
+/* 🔹 CLOSE BUTTON */
+.close-modal {
     position: absolute;
-    top: -40px;
-    right: 0;
+    top: 8px;
+    right: 12px;
     background: none;
     border: none;
-    font-size: 2.5rem;
-    color: white;
+    font-size: 2rem;
     cursor: pointer;
-}
-
-/* VIDEO */
-#videoIframe {
-    width: 100%;
-    height: 50vh;
-    border-radius: 12px;
-    background: black;
 }
