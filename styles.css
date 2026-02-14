@@ -750,6 +750,7 @@ font-family: "DM Sans", sans-serif;
     outline: none;
     background: transparent;
     padding: 0;
+    cursor: grab;
 }
 
 .audio-play-btn img {
@@ -763,6 +764,26 @@ font-family: "DM Sans", sans-serif;
     justify-content: center;
   }
 }
+
+
+.audio-card {
+    overflow: hidden;        /* Prevents pushing layout */
+    border-radius: 12px;     /* Matches your design */
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 1rem;
+}
+
+.waveform {
+    flex: 1;                 /* expands naturally between play + download buttons */
+    min-width: 67%;         /* prevents overflow */
+    height: auto;
+}
+
 
 
 
