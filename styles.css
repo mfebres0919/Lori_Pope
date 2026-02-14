@@ -1254,23 +1254,6 @@ font-family: "DM Sans", sans-serif;
 
 
 
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 1rem;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-
 
 
 
@@ -1312,4 +1295,155 @@ font-family: "DM Sans", sans-serif;
 
 .now-playing-title {
   font-weight: bold;
+}
+
+
+
+
+
+
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* MODAL BACKDROP */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+/* MODAL BOX */
+.video-modal-content {
+    background: transparent;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+}
+
+/* Close button */
+.close-video {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Video responsive container */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 YouTube Ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+
+
+
+/* JUST YOUTUBE INSTEAD OF  */
+/* Makes video responsive in the same area as your old image */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: 1rem; /* matches your card style */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: inherit;
+}
+/* ----------------------------- */
+/*   RESPONSIVE INLINE YOUTUBE  */
+/* ----------------------------- */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    overflow: hidden;
+    border-radius: 1rem;
+    z-index: 5; /* ensures video is ABOVE overlays */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: inherit;
+    z-index: 5;
+    pointer-events: auto; /* allows clicking */
+}
+
+
+/* ----------------------------- */
+/* FIX BLOCKING ELEMENTS         */
+/* ----------------------------- */
+
+/* Gradient overlay should NEVER block clicks */
+.card-gradient {
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Author + Title appear ABOVE video but DO NOT overlap video area */
+.card-author,
+.card-title {
+    position: relative;
+    z-index: 10;
+    pointer-events: none; /* ensures clicks pass through */
+}
+
+/* Play button should stay clickable */
+.play-btn {
+    position: relative;
+    z-index: 20;
+    pointer-events: auto; /* restore click behavior for button */
+}
+
+/* Ensure card itself does not create stacking conflicts */
+.card {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }

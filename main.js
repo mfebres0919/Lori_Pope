@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
+// VOICE MODAL
 document.addEventListener("DOMContentLoaded", () => {
 
     const modal = document.getElementById("audioModal");
@@ -108,4 +108,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+});
+
+
+// YOUTUBE MODAL
+document.addEventListener("DOMContentLoaded", () => {
+
+    const modal = document.getElementById("videoModal");
+    const frame = document.getElementById("videoFrame");
+    const playButtons = document.querySelectorAll(".play-btn");
+    const closeBtn = document.querySelector(".close-video");
+
+    // Open modal when clicking a play button
+    playButtons.forEach(btn => {
+        btn.addEventListener("click", e => {
+            e.preventDefault();
+
+            const url = btn.dataset.video;
+            if (!url) return;
+
+            const embedUrl = url.replace("watch?v=", "embed/") + "?autoplay=1";
+
+            frame.src = embedUrl;
+            modal.style.display = "flex";
+        });
+    });
+
+    // Close modal
+    function closeModal() {
+        modal.style.display = "none";
+        frame.src = ""; // stop video
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+
+    // Close when clicking outside video
+    modal.addEventListener("click", e => {
+        if (e.target === modal) closeModal();
+    });
 });

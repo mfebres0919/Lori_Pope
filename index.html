@@ -186,43 +186,65 @@
     </div>
 
     <div class="showcase-grid fade-on-load">
-        <!-- CARD 1 -->
-        <div class="card fade-on-load">
-            <img src="images/example1.png" alt="" class="card-img">
-            <h3 class="card-author">L.A. Pope</h3>
-            <a href="#" class="play-btn" data-video="https://www.youtube.com/watch?v=1cC71AkWnyE">
-                <img src="images/icons/play-btn.svg" alt="Play">
-            </a>
-            <div class="card-gradient"></div>
-            <h3 class="card-title">Meta Llama Con and Connect</h3>
-        </div>
+      <!-- CARD 1 -->
+      <div class="card fade-on-load">
 
-        <!-- CARD 1 -->
-        <div class="card fade-on-load">
-            <img src="images/example1.png" alt="" class="card-img">
-            <h3 class="card-author">L.A. Pope</h3>
-            <a href="#" class="play-btn"><img src="images/icons/play-btn.svg" alt="Play"></a>
-            <div class="card-gradient"></div>
-            <h3 class="card-title">Instagram Case Study</h3>
-        </div>
-        
-        <!-- CARD 1 -->
-        <div class="card fade-on-load">
-            <img src="images/example1.png" alt="" class="card-img">
-            <h3 class="card-author">L.A. Pope</h3>
-            <a href="#" class="play-btn"><img src="images/icons/play-btn.svg" alt="Play"></a>
-            <div class="card-gradient"></div>
-            <h3 class="card-title">Facebook Civic Dinners</h3>
-        </div>
-        
-        <!-- CARD 1 -->
-        <div class="card fade-on-load">
-            <img src="images/example1.png" alt="" class="card-img">
-            <h3 class="card-author">L.A. Pope</h3>
-            <a href="#" class="play-btn"><img src="images/icons/play-btn.svg" alt="Play"></a>
-            <div class="card-gradient"></div>
-            <h3 class="card-title">Facebook Civic Dinners (:15)</h3>
-        </div>        
+          <!-- RESPONSIVE VIDEO WRAPPER -->
+          <div class="video-wrapper">
+              <iframe 
+                  src="https://www.youtube.com/embed/1cC71AkWnyE" 
+                  title="Meta Llama Con and Connect"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+              </iframe>
+          </div>
+      </div>
+
+      <!-- CARD 1 -->
+      <div class="card fade-on-load">
+
+          <!-- RESPONSIVE VIDEO WRAPPER -->
+          <div class="video-wrapper">
+              <iframe 
+                  src="https://www.youtube.com/watch?v=1cC71AkWnyE" 
+                  title="Meta Llama Con and Connect"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+              </iframe>
+          </div>
+      </div>
+
+      <!-- CARD 1 -->
+      <div class="card fade-on-load">
+
+          <!-- RESPONSIVE VIDEO WRAPPER -->
+          <div class="video-wrapper">
+              <iframe 
+                  src="https://www.youtube.com/watch?v=0GEJpIToNWU" 
+                  title="Meta Llama Con and Connect"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+              </iframe>
+          </div>
+      </div>
+
+            <!-- CARD 1 -->
+      <div class="card fade-on-load">
+
+          <!-- RESPONSIVE VIDEO WRAPPER -->
+          <div class="video-wrapper">
+              <iframe 
+                  src="https://www.youtube.com/embed/1cC71AkWnyE" 
+                  title="Meta Llama Con and Connect"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+              </iframe>
+          </div>
+      </div>   
 
     </div>
 </section>
@@ -494,6 +516,24 @@
             <source src="" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+    </div>
+</div>
+
+
+<!-- YOUTUBE VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+        <button class="close-video">&times;</button>
+
+        <div class="video-container">
+            <iframe id="videoFrame"
+                src=""
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 </div>
 
