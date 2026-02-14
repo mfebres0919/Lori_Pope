@@ -350,23 +350,29 @@ a{ color:inherit; text-decoration:none; }
     padding: 2rem 1.5rem;
     max-width: 900px;
     margin: 0 auto;
+    overflow: hidden;
+
     position: relative;
 }
 
 
-.about-eq, .about-eq2, .about-eq3, .about-eq4 {
-    opacity: 0.36;
-    z-index: -1;
-}
 
 .about-eq {
     position: absolute;
+    bottom: 0;        /* no negative value needed */
     left: 50%;
-    bottom: 0;
     transform: translateX(-50%);
-    width: 100%;
-}
+    
+    width: 300%;      /* controls how wide the wave stretches */
+    height: 90px;     /* controls how tall the wave is */
 
+    background: url('images/backgrounds/about-equalizer.svg') repeat-x center;
+    background-size: contain;
+
+    opacity: 0.46;
+    pointer-events: none; /* protects it from blocking clicks */
+    z-index: -1;          /* stays behind content */
+}
 
 
 
@@ -425,32 +431,12 @@ a{ color:inherit; text-decoration:none; }
     padding-bottom: 6rem;
 }
 
-
-@media (max-width: 890px) {
-    .hidden {
-        display: none;
-    }
-
+@media (min-width: 700px) {
     .about-eq {
-        left: 20%
-    }
-
-    .about-eq2 {
-        left: 85%;
+        bottom: 0;
+        width: 200%;
     }
 }
-
-
-@media (max-width: 600px) {
-    .hidden-2 {
-        display: none;
-    }
-
-    .about-eq {
-        left: 50%;
-    }
-}
-
 
 
 /* ============================
