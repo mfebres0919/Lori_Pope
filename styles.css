@@ -1309,3 +1309,7 @@ font-family: "DM Sans", sans-serif;
     font-size: 2rem;
     cursor: pointer;
 }
+
+.now-playing-title {
+  font-weight: bold;
+}
