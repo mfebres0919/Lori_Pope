@@ -62,3 +62,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   items.forEach((el) => io.observe(el));
 });
+
+
+
+
+
+
+// MODAL CODE 
+const modal = document.getElementById("videoModal");
+const iframe = document.getElementById("videoIframe");
+const closeBtn = document.querySelector(".video-close");
+
+// OPEN MODAL
+document.querySelectorAll(".play-btn").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        const videoURL = this.dataset.video + "?autoplay=1";
+
+        iframe.src = videoURL;
+        modal.style.display = "flex";
+    });
+});
+
+// CLOSE MODAL
+function closeModal() {
+    modal.style.display = "none";
+    iframe.src = ""; // stop video
+}
+
+closeBtn.addEventListener("click", closeModal);
+
+// Click outside video closes modal
+modal.addEventListener("click", function(e) {
+    if (e.target === modal) closeModal();
+});

@@ -37,12 +37,12 @@
     <div class="nav__links" id="primary-nav">
       <a class="nav__link is-active" href="#home">Home</a>
       <a class="nav__link" href="about.html">About</a>
-      <a class="nav__link" href="#contact">Contact</a>
+      <a class="nav__link" href="about.html#contact">Contact</a>
     </div>
 
     <!-- CTA -->
-    <a class="nav__cta" href="html/contact.html">
-      <span>Get a Quote</span>
+    <a class="nav__cta" href="about.html#contact">
+      <span>Get Started</span>
       <span class="nav__cta-icon" aria-hidden="true">
         <!-- arrow icon -->
         <img class="code-icon" src="images/icons/arrow.svg" alt="">
@@ -190,9 +190,11 @@
         <div class="card fade-on-load">
             <img src="images/example1.png" alt="" class="card-img">
             <h3 class="card-author">L.A. Pope</h3>
-            <a href="#" class="play-btn"><img src="images/icons/play-btn.svg" alt="Play"></a>
+            <a href="#" class="play-btn" data-video="https://www.youtube.com/watch?v=1cC71AkWnyE">
+                <img src="images/icons/play-btn.svg" alt="Play">
+            </a>
             <div class="card-gradient"></div>
-            <h3 class="card-title">Facebook Civic Dinners (:15)</h3>
+            <h3 class="card-title">Meta Llama Con and Connect</h3>
         </div>
 
         <!-- CARD 1 -->
@@ -201,7 +203,7 @@
             <h3 class="card-author">L.A. Pope</h3>
             <a href="#" class="play-btn"><img src="images/icons/play-btn.svg" alt="Play"></a>
             <div class="card-gradient"></div>
-            <h3 class="card-title">Facebook Civic Dinners (:15)</h3>
+            <h3 class="card-title">Instagram Case Study</h3>
         </div>
         
         <!-- CARD 1 -->
@@ -210,7 +212,7 @@
             <h3 class="card-author">L.A. Pope</h3>
             <a href="#" class="play-btn"><img src="images/icons/play-btn.svg" alt="Play"></a>
             <div class="card-gradient"></div>
-            <h3 class="card-title">Facebook Civic Dinners (:15)</h3>
+            <h3 class="card-title">Facebook Civic Dinners</h3>
         </div>
         
         <!-- CARD 1 -->
@@ -227,6 +229,12 @@
 
 
 
+<div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+        <button class="video-close">&times;</button>
+        <iframe id="videoIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
 
 
 
@@ -330,7 +338,7 @@
         </svg>    
         <div class="cta-text fade-on-load">
             <h1 class="fade-on-load" >Let's collaborate! Please contact me about your project.</h1>
-            <a href="#contact" class="cta-button fade-on-load">Let's Connect</a>
+            <a href="about.html#contact" class="cta-button fade-on-load">Let's Connect</a>
         </div>
 
         <div class="cta-img fade-on-load">
@@ -365,8 +373,8 @@
         <div class="footer__col fade-on-load">
           <h3 class="footer__heading fade-on-load">PAGES</h3>
           <a class="footer__link fade-on-load" href="#home">Home</a>
-          <a class="footer__link fade-on-load" href="html/about.html">About</a>
-          <a class="footer__link fade-on-load" href="html/contact.html">Contact</a>
+          <a class="footer__link fade-on-load" href="about.html">About</a>
+          <a class="footer__link fade-on-load" href="about.html#contact">Contact</a>
         </div>
 
         <div class="footer__col fade-on-load">
