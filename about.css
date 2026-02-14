@@ -428,7 +428,7 @@ a{ color:inherit; text-decoration:none; }
 
 .about-img img {
     width: auto;        /* was 100% – this caused horizontal stretch */
-    max-width: 60%;    /* only shrink, never grow beyond natural size */
+    max-width: 100%;    /* only shrink, never grow beyond natural size */
     height: auto;
 }
 
