@@ -23,7 +23,7 @@ body {
     body {
         background:
 
-        radial-gradient(2500px 1080px at 50% 2%, rgba(52, 148, 78, 0.20),#1b78ff00 62%
+        radial-gradient(2500px 1080px at 50% -1%, rgba(52, 148, 78, 0.20),#1b78ff00 62%
     );
     }
 }
@@ -468,8 +468,8 @@ a{ color:inherit; text-decoration:none; }
 
 @media (min-width: 1000px) {
     .hero-img {
-        width: 80%;
-        height: 600px;
+        width: 100%;
+        height: 500px;
     }
 }
 
@@ -477,6 +477,11 @@ a{ color:inherit; text-decoration:none; }
     .hero-section {
         margin-top: 7rem;
     }
+
+    .hero-img {
+        width: 90%;
+        height: 620px;
+    }    
 }
 
 @media (max-width: 700px) {
@@ -584,21 +589,31 @@ font-family: "DM Sans", sans-serif;
     }
     
     .showcase-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media (min-width: 1000px) {
     .showcase-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .showcase-section {
+      margin: 0 auto;
     }
 }
 
 @media (min-width: 1400px) {
     .showcase-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-}
+
+    .showcase-section {
+      margin: 5rem;
+    }
+
+}    
+
 
 
 
@@ -607,13 +622,14 @@ font-family: "DM Sans", sans-serif;
    SECTION BASE LAYOUT
 ------------------------- */
 .audio-reels {
-    padding: 2rem 1.5rem;
+    padding: 7rem 1.5rem;
     background-color: #F1F4F2;
+    margin-bottom: 5rem;
 }
 
 .audio-header {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #2F3C35;
     font-weight: 600;
     margin-bottom: 3rem;
@@ -625,6 +641,7 @@ font-family: "DM Sans", sans-serif;
     left: 0;
     bottom: -0.3em;
     width: 100%;
+    height: 7px;
 }
 
 
@@ -786,24 +803,71 @@ font-family: "DM Sans", sans-serif;
 
 
 
+/* submit button */
+.contact__btn{
+  justify-self: end;
+  margin-top: 6px;
+
+  display: inline-block;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.16);
+
+  background: #6F8F7D;
+  color: #fff;
+
+  font-size: 14px;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.contact__btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.contact__btn:active{
+  transform: translateY(0px);
+  filter: brightness(0.98);
+}
+
+.contact__btn-icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.92);
+  color: rgba(11,60,255,0.95);
+}
+
+
+
+
 
 /* CALL TO ACTION SECTION */
 .cta-section {
-    padding: 2rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
+    max-width: 1200px;
+    margin: 1.5rem;
+  }
 
 .cta-content {
     position: relative;
     width: 100%;
-    background: linear-gradient(60deg, rgb(159, 180, 168), rgba(159, 180, 168, 0.8));
+    background: linear-gradient(60deg, rgb(159, 180, 168), rgba(196, 217, 205, 0.8));
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3rem 1.5rem 2rem;
     border-radius: 1rem;
     margin-top: 0;
+    padding-bottom: 5rem;
 }
 
 .cta-eq-2 {
@@ -850,32 +914,50 @@ font-family: "DM Sans", sans-serif;
 }
 
 .cta-img {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
-    padding: 2rem 0rem 6rem 0rem;
   }
 
 .cta-img img {
-    width: 100%;
-    max-width: 300px;
+    /* width: 100%; */
+    max-width: 250px;
     border-radius: 1.5rem;
 }
 
-@media (min-width: 700px) {
-  .cta-img {
-    padding-bottom: 10rem;
-  }
-}
 
 
-@media (min-width: 850px){
-    .cta-eq-2{
+@media (min-width: 800px){
+    .cta-section {
+      margin: 2rem;
+  }  
+  
+  .cta-eq-2{
         width: 60%;
     }
+
+    .cta-content {
+      flex-direction: row;
+      padding-bottom: 7rem;
+    }
+
+    .cta-text {
+      align-items: flex-start;
+    }
+
+    .cta-text h1 {
+        text-align: left;
+        /* padding-left: 2rem; */
+    }
+    
 }
 
 @media (min-width: 890px) {
+
+  .cta-section {
+      margin: 2rem;
+  }  
+  
     .cta-content{
         flex-direction: row;
         justify-content: space-between;
@@ -900,14 +982,31 @@ font-family: "DM Sans", sans-serif;
 }
 
 
+@media (min-width: 1000px) {
+  .cta-content {
+    padding-bottom: 7rem;
+  }
+  .cta-section {
+      margin: 2rem;
+  }
+}
+
 @media (min-width: 1200px) {
-    .cta-content{
-        padding: 4rem 6rem;
-    }
 
     .cta-eq-2{
-        width: 45%;
+        width: 70%;
+        height: 25%;
     }
+
+.cta-img img {
+    /* width: 100%; */
+    max-width: 300px;
+    border-radius: 1.5rem;
+}
+
+.cta-section {
+  margin: 2rem auto;
+}
 
 }
 
@@ -922,7 +1021,7 @@ font-family: "DM Sans", sans-serif;
   background-position: center;
   min-width: 40%;
   height: auto;
-  margin: 1.1rem;
+  margin: 1.2rem;
   border-radius: 1.5rem;
 }
 
@@ -987,7 +1086,7 @@ font-family: "DM Sans", sans-serif;
 
 .footer__blurb{
   margin: 18px 0 18px;
-  color: rgba(255,255,255,0.68);
+  color: rgb(255, 255, 255);
   line-height: 1.65;
   font-size: 14px;
   max-width: 360px;
@@ -996,6 +1095,7 @@ font-family: "DM Sans", sans-serif;
 
 .span-underline {
     text-decoration: underline;
+    color: white;
 }
 
 /* Socials */
@@ -1049,7 +1149,7 @@ font-family: "DM Sans", sans-serif;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: rgba(255,255,255,0.68);
+  color: rgb(255, 255, 255);
 }
 
 .footer__col{
@@ -1061,7 +1161,7 @@ font-family: "DM Sans", sans-serif;
 .footer__link{
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: rgba(255,255,255,0.68);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: color 160ms ease, transform 160ms ease;
 }
@@ -1139,7 +1239,7 @@ font-family: "DM Sans", sans-serif;
 .footer__bottom{
   margin-top: clamp(26px, 3vw, 40px);
   text-align: center;
-  color: rgba(255,255,255,0.75);
+  color: rgb(255, 255, 255);
   font-size: 14px;
 }
 
@@ -1400,7 +1500,6 @@ font-family: "DM Sans", sans-serif;
     width: 100%;
     padding-top: 56.25%; /* 16:9 */
     overflow: hidden;
-    border-radius: 1rem;
     z-index: 5; /* ensures video is ABOVE overlays */
 }
 
@@ -1410,7 +1509,6 @@ font-family: "DM Sans", sans-serif;
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: inherit;
     z-index: 5;
     pointer-events: auto; /* allows clicking */
 }

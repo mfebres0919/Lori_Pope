@@ -23,7 +23,7 @@ body {
     body {
         background:
 
-        radial-gradient(2500px 1080px at 50% -2%, rgba(52, 148, 78, 0.20),#1b78ff00 62%
+        radial-gradient(2500px 1080px at 50% -1%, rgba(52, 148, 78, 0.20),#1b78ff00 62%
     );
     }
 }
@@ -92,7 +92,7 @@ a{ color:inherit; text-decoration:none; }
 
   /* subtle separation */
   box-shadow:
-    0 14px 30px rgba(0,0,0,0.15),
+    0 14px 30px rgba(0,0,0,0.05),
     0 1px 0 rgba(255, 255, 255, 0) inset;
 
   position: relative;
@@ -624,7 +624,7 @@ a{ color:inherit; text-decoration:none; }
 .contact__info-link{
   color: #4A4C56;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 .contact__info-link:hover{ text-decoration: underline; }
 
@@ -632,7 +632,7 @@ a{ color:inherit; text-decoration:none; }
   margin: 0;
   color: #4A4C56;
   line-height: 1.5;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .contact__hours{
@@ -652,7 +652,7 @@ a{ color:inherit; text-decoration:none; }
   margin: 0;
   color: #4A4C56;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* RIGHT */
@@ -682,7 +682,7 @@ a{ color:inherit; text-decoration:none; }
   color: #4A4C56;
   outline: none;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .contact__textarea{
@@ -972,7 +972,6 @@ a{ color:inherit; text-decoration:none; }
   min-width: 40%;
   height: auto;
   border-radius: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .footer__container{
@@ -1036,7 +1035,7 @@ a{ color:inherit; text-decoration:none; }
 
 .footer__blurb{
   margin: 18px 0 18px;
-  color: rgba(255,255,255,0.68);
+  color: rgb(255, 255, 255);
   line-height: 1.65;
   font-size: 14px;
   max-width: 360px;
@@ -1045,6 +1044,7 @@ a{ color:inherit; text-decoration:none; }
 
 .span-underline {
     text-decoration: underline;
+    color: white;
 }
 
 /* Socials */
@@ -1098,7 +1098,7 @@ a{ color:inherit; text-decoration:none; }
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: rgba(255,255,255,0.68);
+  color: rgb(255, 255, 255);
 }
 
 .footer__col{
@@ -1110,7 +1110,7 @@ a{ color:inherit; text-decoration:none; }
 .footer__link{
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: rgba(255,255,255,0.68);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: color 160ms ease, transform 160ms ease;
 }
@@ -1188,7 +1188,7 @@ a{ color:inherit; text-decoration:none; }
 .footer__bottom{
   margin-top: clamp(26px, 3vw, 40px);
   text-align: center;
-  color: rgba(255,255,255,0.75);
+  color: rgb(255, 255, 255);
   font-size: 14px;
 }
 
@@ -1254,14 +1254,6 @@ a{ color:inherit; text-decoration:none; }
 
   filter: brightness(0) invert(1);
 }
-
-
-
-
-
-
-
-
 
 
 
